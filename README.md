@@ -15,6 +15,7 @@ An advanced document processing platform that leverages **Multi-Agent AI** and *
     -   **Validator Agent**: Ensures extracted data meets quality and format standards.
     -   **Orchestration**: A state-machine based workflow manages the lifecycle of document processing.
 -   **Modern API**: High-performance REST API built with **FastAPI**.
+-   **Interactive Frontend**: User-friendly interface built with **React** and **Vite** for easy document uploads and querying.
 
 ## 🛠️ Tech Stack
 
@@ -22,6 +23,11 @@ An advanced document processing platform that leverages **Multi-Agent AI** and *
 -   **[FastAPI](https://fastapi.tiangolo.com/)**: Modern, fast web framework for building APIs with Python.
 -   **[LangChain](https://www.langchain.com/)**: Framework for developing applications powered by language models.
 -   **[LangGraph](https://python.langchain.com/docs/langgraph)**: Library for building stateful, multi-agent applications with LLMs.
+
+### Frontend
+-   **[React](https://react.dev/)**: Library for building user interfaces.
+-   **[Vite](https://vitejs.dev/)**: Next Generation Frontend Tooling.
+-   **Vanilla CSS**: Custom styling for a responsive and modern UI.
 
 ### AI & Machine Learning
 -   **[HuggingFace Embeddings](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)**: Open-source embedding models for semantic search.
@@ -45,6 +51,9 @@ An advanced document processing platform that leverages **Multi-Agent AI** and *
 │   ├── services/        # Business logic (Ingestion, RAG)
 │   ├── models/          # Pydantic models for API and internal data
 │   └── ...
+├── frontend/            # React + Vite Frontend application
+│   ├── src/             # Frontend source code
+│   └── package.json     # Frontend dependencies
 ├── data/
 │   ├── uploads/         # Stored uploaded documents
 │   └── vector_store/    # FAISS index persistence
@@ -81,6 +90,13 @@ An advanced document processing platform that leverages **Multi-Agent AI** and *
     pip install -r requirements.txt
     ```
 
+4.  **Install Frontend Dependencies**:
+    ```bash
+    cd frontend
+    npm install
+    cd ..
+    ```
+
 4.  **Configure Environment**:
     Create a `.env` file (if needed by specific agents/services):
     ```env
@@ -97,6 +113,17 @@ uvicorn main:app --reload
 ```
 
 The API will be available at `http://127.0.0.1:8000`.
+
+### Running the Frontend
+
+In a new terminal window:
+
+```bash
+cd frontend
+npm run dev
+```
+
+The frontend will be available at `http://localhost:5173`.
 
 ### Documentation
 
