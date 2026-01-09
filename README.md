@@ -145,3 +145,11 @@ Run the test suite to verify functionality:
 ```bash
 pytest
 ```
+
+## ✅ To-Do List
+
+- [ ] **Improve Query Processing**: Enhance the RAG pipeline to better handle complex queries and multi-turn conversations.
+- [ ] **Add User Authentication**: Implement secure login and registration.
+- [ ] **Support More Formats**: Add support for DOCX and image-based documents (via OCR integration).
+- [ ] **Deployment**: Create Docker containers and deployment scripts.
+
